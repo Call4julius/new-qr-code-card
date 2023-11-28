@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap");
+
+/* ----custom properties--- */
+
+:root {
+  /* colors */
+  --clr-neutral-100: hsl(0, 0%, 100%);
+  --clr-neutral-200: hsl(212, 45%, 89%);
+  --clr-primary-400: hsl(220, 15%, 55%);
+  --clr-primary-900: hsl(218, 44%, 22%);
+
+  /* typography */
+  --ff-content: "Outfit", sans-serif;
+  --fs-content: 0.75rem;
+  --fw-400: 400;
+  --fw-700: 700;
+}
+
+/* ----global reset---- */
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  overflow-wrap: break-word;
+}
+
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+  line-height: 1.2;
+}
+
+img,
+picture,
+video,
+figure {
+  display: block;
+  min-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+/* ---utility class--- */
+
+.flow > * + * {
+  margin-block: 1rem;
+}
+
+/* ----general styling---- */
+
+body {
+  font-family: var(--ff-content);
+  font-size: var(--fs-content);
+  font-weight: var(--fw-400);
+  background: var(--clr-neutral-200);
+  display: flex;
+  flex-flow: column wrap;
+  flex: 1;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.container {
+  background: var(--clr-neutral-100);
+  border-radius: 10px;
+  max-width: 16rem;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.image-container img {
+  border-radius: 10px;
+  max-width: 200px;
+  aspect-ratio: 1;
+}
+
+.content-container {
+  font-weight: var(--fw-700);
+  padding-inline: 0.5rem;
+
+  & p {
+    opacity: 0.5;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
